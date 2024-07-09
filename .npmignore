@@ -1,0 +1,12 @@
+dist/js
+tsconfig.json
+src
+assets
+scripts
+rollup.config.js
+prettier.config.cjs
+.github
+.vscode
+.editorconfig
+.prettierignore
+
