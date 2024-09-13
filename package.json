@@ -6,9 +6,12 @@
   "license": "ISC",
   "keywords": [],
   "type": "module",
-  "main": "./lib/vuone.umd.js",
-  "module": "./lib/vuone.esm.js",
+  "main": "./lib/utils.umd.js",
+  "module": "./lib/utils.esm.js",
   "types": "./types/main.d.ts",
+  "files": [
+    "lib"
+  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"

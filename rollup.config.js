@@ -1,40 +1,44 @@
 // https://cn.rollupjs.org
 import rollupPluginTypeScript from "@rollup/plugin-typescript";
-import rollupPluginTerser from '@rollup/plugin-terser';
-import rollupPluginCommonJs from '@rollup/plugin-commonjs'
-import rollupPluginNodeResolve from '@rollup/plugin-node-resolve'
-import rollupPluginSummary from 'rollup-plugin-summary'
+import rollupPluginTerser from "@rollup/plugin-terser";
+import rollupPluginCommonJs from "@rollup/plugin-commonjs"
+import rollupPluginNodeResolve from "@rollup/plugin-node-resolve"
+import rollupPluginSummary from "rollup-plugin-summary"
 
 
 export default [
   {
-    input: 'src/main.ts',
+    input: "src/main.ts",
     output: [
       {
-        name: 'vuone',
-        file: './lib/vuone.cjs.js',
-        format: 'cjs'
+        name: "vuone",
+        file: "./lib/vuone.cjs.js",
+        format: "cjs"
       },
       {
-        name: 'vuone',
-        file: './lib/vuone.esm.js',
-        format: 'es'
+        name: "vuone",
+        file: "./lib/vuone.esm.js",
+        format: "es"
       },
       {
-        name: 'vuone',
-        file: './lib/vuone.min.js',
-        format: 'iife',
+        name: "vuone",
+        file: "./lib/vuone.min.js",
+        format: "iife",
       },
       {
-        name: 'vuone',
-        file: './lib/vuone.umd.js',
-        format: 'umd',
+        name: "vuone",
+        file: "./lib/vuone.umd.js",
+        format: "umd",
       },
     ],
     plugins: [
       rollupPluginNodeResolve(),
       rollupPluginCommonJs(),
-      rollupPluginTypeScript(),
+      rollupPluginTypeScript({
+        compilerOptions: {
+          "declaration": false,
+        }
+      }),
       rollupPluginTerser({
         compress: true,
         keep_classnames: false,
@@ -56,6 +60,6 @@ export default [
         showMinifiedSize: true,
       })
     ],
-    logLevel: 'debug', // type LogLevel = 'warn' | 'info' | 'debug';
+    logLevel: "debug", // type LogLevel = 'warn' | 'info' | 'debug';
   },
 ]
