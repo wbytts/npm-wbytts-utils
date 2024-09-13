@@ -16,6 +16,10 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "registry": {
+    "type": "git",
+    "url": "https://github.com/wbytts/npm_wbytts_utils"
+  },
   "scripts": {
     "clean": "node ./scripts/clean.js",
     "build": "pnpm run clean && tsc && rollup -c",
