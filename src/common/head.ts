@@ -3,6 +3,5 @@
  * @param arr
  * @returns
  */
-const head = (arr: any[]) => (arr && arr.length ? arr[0] : undefined);
+export const head = (arr: any[]) => (arr && arr.length ? arr[0] : undefined);
 
-export default head;

@@ -4,7 +4,7 @@
  * @param {number} [ms=0]
  * @returns
  */
-const debounce = (fn: Function, ms = 0) => {
+export const debounce = (fn: Function, ms = 0) => {
   let timeoutId: number;
   return function (...args: any[]) {
     clearTimeout(timeoutId);
@@ -12,4 +12,3 @@ const debounce = (fn: Function, ms = 0) => {
   };
 };
 
-export default debounce;

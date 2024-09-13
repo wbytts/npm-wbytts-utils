@@ -5,7 +5,7 @@
  * @param {number} wait
  * @returns
  */
-const throttle = (fn: Function, wait: number) => {
+export const throttle = (fn: Function, wait: number) => {
   let inThrottle: boolean, lastFn: number, lastTime: number;
   return function () {
     // @ts-ignore
@@ -30,4 +30,3 @@ const throttle = (fn: Function, wait: number) => {
   };
 };
 
-export default throttle;

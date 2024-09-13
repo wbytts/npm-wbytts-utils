@@ -5,10 +5,9 @@
  * @param upper
  * @returns
  */
-const clamp = (num: number, lower: number, upper: number) =>
+export const clamp = (num: number, lower: number, upper: number) =>
   Math.max(
     Math.min(Number(num), Math.max(lower, upper)),
     Math.min(lower, upper)
   );
 
-export default clamp;

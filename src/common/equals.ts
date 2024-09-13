@@ -3,7 +3,7 @@
  * @param a
  * @param b
  */
-const equals = (a: any, b: any): boolean => {
+export const equals = (a: any, b: any): boolean => {
   if (a === b) return true;
   if (a instanceof Date && b instanceof Date)
     return a.getTime() === b.getTime();
@@ -15,4 +15,3 @@ const equals = (a: any, b: any): boolean => {
   return keys.every((k) => equals(a[k], b[k]));
 };
 
-export default equals;

@@ -1,8 +1,7 @@
 /**
- * Get a random element from an array.
+ * 从数组中随机得到一个元素
  *
  * @param {any[]} arr
  */
-const sample = (arr: any[]) => arr[Math.floor(Math.random() * arr.length)];
+export const sample = (arr: any[]) => arr[Math.floor(Math.random() * arr.length)];
 
-export default sample;

@@ -1,4 +1,4 @@
-dist/js
+dist
 tsconfig.json
 src
 assets
@@ -9,4 +9,3 @@ prettier.config.cjs
 .vscode
 .editorconfig
 .prettierignore
-

@@ -3,6 +3,5 @@
  * @param arr
  * @param key
  */
-const pluck = (arr: any[], key: any) => arr.map((i) => i[key]);
+export const pluck = (arr: any[], key: any) => arr.map((i) => i[key]);
 
-export default pluck;

@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "ESNext",
+    // "module": "ESNext",
     "lib": [
       "DOM",
       "ESNext",
       "DOM.Iterable"
     ],
     "declaration": true,
-    "outDir": "./dist/js",
+    "declarationDir": "./types",
+    "outDir": "./dist",
     "rootDir": "./src",
     "downlevelIteration": true,
     "strict": true,

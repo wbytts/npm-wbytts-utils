@@ -1,1 +1,10 @@
-export { default as getElement } from './getElement';
+export { getElement } from './get-element';
+export { animateNumber } from './animate-number';
+export { disableTouchMove } from './disable-touch-move';
+export { enableTouchMove } from './enable-touch-move';
+export { getNormalizedMousePos } from './get-normalized-mouse-pos';
+export { isBottomVisible } from './is-bottom-visible';
+export { isElBottomVisible } from './is-el-bottom-visible';
+export { preventDefault } from './prevent-default';
+export { previewImage } from './preview-image';
+export { requestInterval } from './request-interval';

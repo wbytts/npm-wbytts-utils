@@ -2,7 +2,7 @@
  * Returns the memoized (cached) function.
  * @param fn
  */
-const memorize = (fn: Function) => {
+export const memorize = (fn: Function) => {
   const cache = new Map();
   const cached = function (val: any) {
     // @ts-ignore
@@ -15,4 +15,3 @@ const memorize = (fn: Function) => {
   return cached;
 };
 
-export default memorize;

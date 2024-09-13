@@ -2,7 +2,7 @@
  * Creates an array of arrays, ungrouping the elements in an array produced by zip.
  * @param arr
  */
-const unzip = (arr: any[]) =>
+export const unzip = (arr: any[]) =>
   arr.reduce(
     (acc, val) => (val.forEach((v: any, i: number) => acc[i].push(v)), acc),
     Array.from({
@@ -10,4 +10,3 @@ const unzip = (arr: any[]) =>
     }).map((x) => [])
   );
 
-export default unzip;

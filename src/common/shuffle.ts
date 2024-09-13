@@ -4,7 +4,7 @@
  * @param {*} [...arr]
  * @returns
  */
-const shuffle = ([...arr]) => {
+export const shuffle = ([...arr]) => {
   let m = arr.length;
   while (m) {
     const i = Math.floor(Math.random() * m--);
@@ -13,4 +13,3 @@ const shuffle = ([...arr]) => {
   return arr;
 };
 
-export default shuffle;

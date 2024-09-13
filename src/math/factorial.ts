@@ -2,7 +2,7 @@
  * Calculates the factorial of a number.
  * @param n
  */
-const factorial = (n: number): any => {
+export const factorial = (n: number): any => {
   return n < 0
     ? (() => {
         throw new TypeError("Negative numbers are not allowed!");
@@ -12,4 +12,3 @@ const factorial = (n: number): any => {
     : n * factorial(n - 1);
 };
 
-export default factorial;

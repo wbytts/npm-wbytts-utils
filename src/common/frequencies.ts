@@ -3,10 +3,9 @@
  * @param arr
  * @returns
  */
-const frequencies = (arr: any[]) =>
+export const frequencies = (arr: any[]) =>
   arr.reduce((a, v) => {
     a[v] = a[v] ? a[v] + 1 : 1;
     return a;
   }, {});
 
-export default frequencies;

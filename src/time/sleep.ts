@@ -3,7 +3,6 @@
  *
  * @param {number} time
  */
-const sleep = (time: number) =>
+export const sleep = (time: number) =>
   new Promise((resolve) => setTimeout(resolve, time));
 
-export default sleep;

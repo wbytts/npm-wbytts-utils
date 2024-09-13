@@ -1,10 +1,10 @@
-export { default as sleep } from './sleep'
-export { default as getTimestamp } from './getTimestamp'
-export { default as getTimeFromDate } from './getTimeFromDate'
-export { default as getTimeDeltaAsSeconds } from './getTimeDeltaAsSeconds'
-export { default as fromTimestamp } from './fromTimestamp'
-export { default as dateRange } from './dateRange'
-export { default as addWeeksToDate } from './addWeeksToDate'
-export { default as addSecondsToDate } from './addSecondsToDate'
-export { default as addHoursToDate } from './addHoursToDate'
-export { default as addDaysToDate } from './addDaysToDate'
+export { sleep } from './sleep';
+export { getTimestamp } from './get-timestamp';
+export { getTimeFromDate } from './get-time-from-date';
+export { getTimeDeltaAsSeconds } from './get-time-delta-as-seconds';
+export { fromTimestamp } from './from-timestamp';
+export { dateRange } from './date-range';
+export { addWeeksToDate } from './add-weeks-to-date';
+export { addSecondsToDate } from './add-seconds-to-date';
+export { addHoursToDate } from './add-hours-to-date';
+export { addDaysToDate } from './add-days-to-date';

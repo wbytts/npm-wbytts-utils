@@ -2,7 +2,7 @@
  * Converts an asynchronous function to return a promise.
  * @param func
  */
-const promisify =
+export const promisify =
   (func: Function) =>
   (...args: any[]) =>
     new Promise((resolve, reject) =>
@@ -11,4 +11,3 @@ const promisify =
       )
     );
 
-export default promisify;

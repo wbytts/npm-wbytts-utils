@@ -1,1 +1,2 @@
-export { default as reload } from './reload';
+export { reload } from './reload';
+export { getURLParameters } from './get-url-parameters';

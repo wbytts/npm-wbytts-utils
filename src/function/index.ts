@@ -1,1 +1,1 @@
-export { default as partial } from './partial';
+export { partial } from './partial';

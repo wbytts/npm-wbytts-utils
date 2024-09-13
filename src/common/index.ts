@@ -1,2 +1,2 @@
-export { default as debounce } from './debounce';
-export { default as throttle } from './throttle';
+export { debounce } from './debounce';
+export { throttle } from './throttle';

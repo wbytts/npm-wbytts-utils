@@ -1,6 +1,5 @@
 /**
- * Reload the current page.
+ * 重新加载当前页面
  */
-const reload = () => location.reload();
+export const reload = () => location.reload();
 
-export default reload;

@@ -1,30 +1,35 @@
 {
-  "name": "vuone",
-  "version": "0.0.6",
-  "description": "一个致敬炳翰大佬的个人用工具库",
+  "name": "@wbytts/utils",
+  "version": "0.0.1",
+  "description": "个人用工具函数库",
   "author": "wbytts",
   "license": "ISC",
-  "keywords": ["CBH", "NB"],
+  "keywords": [],
   "type": "module",
-  "main": "./dist/vuone.js",
-  "module": "./dist/vuone.js",
+  "main": "./lib/vuone.umd.js",
+  "module": "./lib/vuone.esm.js",
+  "types": "./types/main.d.ts",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "build": "rimraf dist && tsc && rollup -c",
-    "prepatch": "pnpm run build && npm version prepatch && npm publish"
+    "clean": "node ./scripts/clean.js",
+    "build": "pnpm run clean && tsc && rollup -c",
+    "push": "pnpm run build && npm version patch && npm publish"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.7",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^11.1.6",
+    "fs-extra": "^11.2.0",
     "prettier": "^3.3.2",
     "rimraf": "^5.0.8",
     "rollup": "^4.18.0",
+    "rollup-plugin-summary": "^2.0.1",
     "tslib": "^2.6.3",
     "typescript": "^5.5.3"
   }

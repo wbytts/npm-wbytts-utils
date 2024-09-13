@@ -3,7 +3,7 @@
  * @param fn
  * @param args
  */
-const attempt = (fn: Function, ...args: any[]) => {
+export const attempt = (fn: Function, ...args: any[]) => {
   try {
     return fn(...args);
   } catch (e) {
@@ -11,4 +11,3 @@ const attempt = (fn: Function, ...args: any[]) => {
   }
 };
 
-export default attempt;

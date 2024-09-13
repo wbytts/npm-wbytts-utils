@@ -3,7 +3,6 @@
  * @param arr
  * @returns
  */
-const last = (arr: any[]) =>
+export const last = (arr: any[]) =>
   arr && arr.length ? arr[arr.length - 1] : undefined;
 
-export default last;

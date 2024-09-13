@@ -1,4 +1,9 @@
 {
   "prettier.enable": true,
-  "prettier.configPath": "./prettier.config.cjs"
+  "prettier.configPath": "./prettier.config.cjs",
+  "cSpell.words": [
+    "Brotli",
+    "fnames",
+    "Gzipped"
+  ]
 }

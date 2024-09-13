@@ -1,2 +1,2 @@
-export { default as deg2rad } from './deg2rad'
+export { deg2rad } from './deg-to-rad'
 

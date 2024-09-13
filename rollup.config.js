@@ -3,6 +3,7 @@ import rollupPluginTypeScript from "@rollup/plugin-typescript";
 import rollupPluginTerser from '@rollup/plugin-terser';
 import rollupPluginCommonJs from '@rollup/plugin-commonjs'
 import rollupPluginNodeResolve from '@rollup/plugin-node-resolve'
+import rollupPluginSummary from 'rollup-plugin-summary'
 
 
 export default [
@@ -11,22 +12,22 @@ export default [
     output: [
       {
         name: 'vuone',
-        file: './dist/vuone.common.js',
+        file: './lib/vuone.cjs.js',
         format: 'cjs'
       },
       {
         name: 'vuone',
-        file: './dist/vuone.esm.js',
+        file: './lib/vuone.esm.js',
         format: 'es'
       },
-      // {
-      //   name: 'vuone',
-      //   file: './dist/vuone.min.js',
-      //   format: 'iife',
-      // },
       {
         name: 'vuone',
-        file: './dist/vuone.js',
+        file: './lib/vuone.min.js',
+        format: 'iife',
+      },
+      {
+        name: 'vuone',
+        file: './lib/vuone.umd.js',
         format: 'umd',
       },
     ],
@@ -36,8 +37,6 @@ export default [
       rollupPluginTypeScript(),
       rollupPluginTerser({
         compress: true,
-        ecma: true,
-        ie8: true,
         keep_classnames: false,
         keep_fnames: false,
         format: {
@@ -50,6 +49,12 @@ export default [
           preserve_annotations: false,
         }
       }),
+      // 打包结果分析
+      rollupPluginSummary({
+        showBrotliSize: true,
+        showGzippedSize: true,
+        showMinifiedSize: true,
+      })
     ],
     logLevel: 'debug', // type LogLevel = 'warn' | 'info' | 'debug';
   },

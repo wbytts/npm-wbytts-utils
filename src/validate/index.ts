@@ -1,3 +1,3 @@
-export { default as isIdCard } from './isIdcard';
-export { default as isPhoneNumber } from './isPhoneNumber';
-export { default as isUrl } from './isUrl';
+export { isIdCard } from './is-id-card';
+export { isPhoneNumber } from './is-phone-number';
+export { isUrl } from './is-url';

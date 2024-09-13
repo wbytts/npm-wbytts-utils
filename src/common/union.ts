@@ -3,6 +3,5 @@
  * @param a
  * @param b
  */
-const union = (a: any, b: any) => Array.from(new Set([...a, ...b]));
+export const union = (a: any, b: any) => Array.from(new Set([...a, ...b]));
 
-export default union;

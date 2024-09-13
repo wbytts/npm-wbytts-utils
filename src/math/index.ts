@@ -1,6 +1,5 @@
-export { default as sum } from './sum'
-export { default as sumPower } from './sumPower'
-export { default as lerp } from './lerp'
-export { default as factorial } from './factorial'
-export { default as average } from './average'
-
+export { sum } from './sum';
+export { sumPower } from './sum-power';
+export { lerp } from './lerp';
+export { factorial } from './factorial';
+export { average } from './average';
