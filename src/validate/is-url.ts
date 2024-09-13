@@ -1,5 +1,5 @@
 /**
- * Decide whether a string is a URL.
+ *  检查字符串是否是URL
  * @param url
  * @returns
  */

@@ -1,5 +1,5 @@
 /**
- * Calculates the date of n hours from the given date.
+ * Date 添加小时数
  * @param d
  * @param n
  * @returns

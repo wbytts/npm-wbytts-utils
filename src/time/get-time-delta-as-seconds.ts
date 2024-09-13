@@ -1,5 +1,5 @@
 /**
- * Get the time delta as ms.
+ * 获得毫秒数
  * @param begin
  * @param end
  * @returns

@@ -1,5 +1,5 @@
 /**
- * Calculates the date of n weeks from the given date.
+ * Date 添加星期数
  * @param d
  * @param n
  * @returns

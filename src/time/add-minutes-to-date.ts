@@ -1,5 +1,5 @@
 /**
- * Calculates the date of n minutes from the given date.
+ * Date 添加分钟数
  * @param d
  * @param n
  * @returns

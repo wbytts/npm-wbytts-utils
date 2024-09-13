@@ -1,5 +1,5 @@
 /**
- * Calculates the date of n days from the given date.
+ * Date 添加天数
  * @param d
  * @param n
  * @returns

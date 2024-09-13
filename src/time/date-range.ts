@@ -1,5 +1,5 @@
 /**
- * Creates a generator, that generates all dates in the given range using the given step.
+ * 创建一个生成器，生成两个Date之间的日期，默认间隔为 1
  * @param start
  * @param end
  * @param step

@@ -4,9 +4,11 @@
  * @param power
  * @param start
  */
-export const sumPower = (end: number, power = 2, start = 1) =>
-  Array(end + 1 - start)
+export const sumPower = (end: number, power = 2, start = 1) => {
+  return Array(end + 1 - start)
     .fill(0)
     .map((x, i) => (i + start) ** power)
     .reduce((a, b) => a + b, 0);
+}
+
 

@@ -1,5 +1,5 @@
 /**
- * Calculates the factorial of a number.
+ * 计算斐波那契数（递归）
  * @param n
  */
 export const factorial = (n: number): any => {

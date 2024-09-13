@@ -1,5 +1,5 @@
 /**
- * Calculates the date of n seconds from the given date.
+ * Date 添加秒数
  * @param d
  * @param n
  * @returns

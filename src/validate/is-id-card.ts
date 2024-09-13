@@ -1,5 +1,5 @@
 /**
- * Check whether a string is a valid idcard number.
+ * 检查字符串是否是身份证
  *
  * @param {string} str
  * @returns {boolean}

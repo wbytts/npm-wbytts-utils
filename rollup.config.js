@@ -11,23 +11,21 @@ export default [
     input: "src/main.ts",
     output: [
       {
-        name: "vuone",
-        file: "./lib/vuone.cjs.js",
+        file: "./lib/utils.cjs.js",
         format: "cjs"
       },
       {
-        name: "vuone",
-        file: "./lib/vuone.esm.js",
+        file: "./lib/utils.esm.js",
         format: "es"
       },
       {
-        name: "vuone",
-        file: "./lib/vuone.min.js",
+        name: "$by",
+        file: "./lib/utils.min.js",
         format: "iife",
       },
       {
-        name: "vuone",
-        file: "./lib/vuone.umd.js",
+        name: "$by",
+        file: "./lib/utils.umd.js",
         format: "umd",
       },
     ],

@@ -1,9 +1,11 @@
 /**
- * Return the average of the number array.
+ * 返回多个数字的平均数
  *
  * @param {...number[]} nums
  * @returns {number}
  */
-export const average = (...nums: number[]): number =>
-  nums.reduce((acc, val) => acc + val, 0) / nums.length;
+export const average = (...nums: number[]): number => {
+  return nums.reduce((acc, val) => acc + val, 0) / nums.length;
+}
+
 

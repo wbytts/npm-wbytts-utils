@@ -1,8 +1,9 @@
 /**
- * Return the sum of numbers.
- *
+ * 求和
  * @param {...number[]} arr
  */
-export const sum = (...arr: number[]): number =>
-  [...arr].reduce((acc, val) => acc + val, 0);
+export const sum = (...arr: number[]): number => {
+  return [...arr].reduce((acc, val) => acc + val, 0);
+}
+
 
