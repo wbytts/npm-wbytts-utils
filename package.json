@@ -1,10 +1,12 @@
 {
   "name": "@wbytts/utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "个人用工具函数库",
   "author": "wbytts",
   "license": "ISC",
-  "keywords": ["utils"],
+  "keywords": [
+    "utils"
+  ],
   "type": "module",
   "homepage": "https://github.com/wbytts/npm_wbytts_utils",
   "main": "./lib/utils.umd.js",
