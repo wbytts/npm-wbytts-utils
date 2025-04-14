@@ -6,6 +6,7 @@ import typescript from '@rollup/plugin-typescript';
 import babel from '@rollup/plugin-babel';
 import rollupPluginSummary from 'rollup-plugin-summary';
 import { execSync } from 'child_process';
+import yalcPushAfterBuild from './rollup-plugins/yalc-push-after-build.js';
 
 export const terserPlugin = terser({
   compress: true,
@@ -40,14 +41,5 @@ export const commonPlugins = [
     // showGzippedSize: true,
     // showMinifiedSize: true,
   // }),
-  {
-    name: 'yalc-push-after-build',
-    writeBundle() {
-      try {
-        execSync('yalc push', { stdio: 'inherit' });
-      } catch (error) {
-        console.error('yalc push failed:', error);
-      }
-    }
-  }
+  yalcPushAfterBuild
 ];

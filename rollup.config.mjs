@@ -58,5 +58,15 @@ export default [
     input: "src/excel/index.ts",
     output: getOutputs("excel", { globalName: "$ByExcel" }),
     plugins: [...commonPlugins],
+  },
+  {
+    input: "src/logger/index.ts",
+    output: getOutputs("logger", { globalName: "$ByLogger" }),
+    plugins: [...commonPlugins],
+  },
+  {
+    input: "src/temp/index.ts",
+    output: getOutputs("temp", { globalName: "$ByTemp" }),
+    plugins: [...commonPlugins],
   }
 ];
