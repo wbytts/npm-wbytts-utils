@@ -1,5 +1,6 @@
-export { sum } from './sum';
-export { sumPower } from './sum-power';
-export { lerp } from './lerp';
-export { factorial } from './factorial';
-export { average } from './average';
+export { default as BigNumber } from 'bignumber.js';
+export * from './sum';
+export * from './average';
+export * from './lerp';
+export * from './factorial';
+export * from './sum-power';

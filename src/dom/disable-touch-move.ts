@@ -1,11 +1,10 @@
 import {preventDefault} from "./prevent-default";
 
 /**
- * Disable touchmove event.
+ * 禁用触摸移动事件，防止页面滚动
  */
 export const disableTouchMove = () => {
   document.body.addEventListener("touchmove", preventDefault, {
     passive: false,
   });
 };
-

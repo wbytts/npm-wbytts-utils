@@ -1,10 +1,1 @@
-export { sleep } from './sleep';
-export { getTimestamp } from './get-timestamp';
-export { getTimeFromDate } from './get-time-from-date';
-export { getTimeDeltaAsSeconds } from './get-time-delta-as-seconds';
-export { fromTimestamp } from './from-timestamp';
-export { dateRange } from './date-range';
-export { addWeeksToDate } from './add-weeks-to-date';
-export { addSecondsToDate } from './add-seconds-to-date';
-export { addHoursToDate } from './add-hours-to-date';
-export { addDaysToDate } from './add-days-to-date';
+export { dayjs } from './dayjs'

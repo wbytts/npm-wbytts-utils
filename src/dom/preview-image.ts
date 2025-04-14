@@ -1,4 +1,4 @@
-import { loadImageAsBase64URL } from '../convert/load-image-as-base64-url';
+import { loadImageAsBase64URL } from '../utils/convert/load-image-as-base64-url';
 
 /**
  * Preview an Image when user uploads an image file.
