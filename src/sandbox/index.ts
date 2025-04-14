@@ -1,5 +1,2 @@
 
-
-export class ZczySandbox {
-  
-}
+export { BySandbox } from "./by-sandbox"
