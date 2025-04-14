@@ -4,7 +4,11 @@
  * @param partials
  */
 export const partial =
-  (fn: Function, ...partials: any[]) =>
+(fn: Function, ...partials: any[]) =>
   (...args: any[]) =>
     fn(...partials, ...args);
+
+
+
+
 

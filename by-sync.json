@@ -1,0 +1,11 @@
+{
+  "server": "wbytts.e4.luyouxia.net:42614",
+  "identity": "work-my-github-npm-wbytts-utils",
+  "mode": "watch",
+  "exclude": [
+    ".git",
+    "node_modules",
+    "dist",
+    "target"
+  ]
+}

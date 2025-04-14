@@ -4,9 +4,4 @@
  * @param l
  * @returns
  */
-export const padNumber = (n: number, l: number) => `${n}`.padStart(l, "0");
-
-
-
-
-
+export const padNumber = (n: number, l: number) => `${n}`.padStart(l, '0');
