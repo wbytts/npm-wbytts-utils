@@ -12,7 +12,8 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "declaration": true,
-    "declarationDir": "dist/types"
+    "declarationDir": "dist/types",
+    "lib": ["DOM"]
   },
   "exclude": [
     "node_modules/**"

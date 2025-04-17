@@ -1,1 +1,1 @@
-export { ZczyRequest } from './zczy-request';
+export { ByRequest } from './by-request';

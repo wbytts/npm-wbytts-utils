@@ -1,3 +1,3 @@
 export { reload } from './reload';
-export { getURLParameters } from './get-url-parameters';
-export { copyToClipboard } from './copy-to-clipboard'
+export { getURLParameters, getURLParameter, buildQueryString } from './url-parameters';
+export { copyToClipboard, copyToClipboardSync } from './copy-to-clipboard'

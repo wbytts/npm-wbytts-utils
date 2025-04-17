@@ -68,5 +68,15 @@ export default [
     input: "src/temp/index.ts",
     output: getOutputs("temp", { globalName: "$ByTemp" }),
     plugins: [...commonPlugins],
-  }
+  },
+  {
+    input: "src/event/index.ts",
+    output: getOutputs("event", { globalName: "$ByEvent" }),
+    plugins: [...commonPlugins],
+  },
+  {
+    input: "src/monitor/index.ts",
+    output: getOutputs("monitor", { globalName: "$ByMonitor" }),
+    plugins: [...commonPlugins],
+  },
 ];

@@ -1,4 +1,3 @@
-export * from './common';
 export * from './convert';
 export * from './device';
 export * from './function';
