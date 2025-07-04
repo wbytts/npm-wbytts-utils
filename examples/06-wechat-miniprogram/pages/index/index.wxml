@@ -1,0 +1,118 @@
+<!--pages/index/index.wxml-->
+<view class="page-container">
+  <!-- 头部信息 -->
+  <view class="card">
+    <view class="header">
+      <view class="logo">📦</view>
+      <view class="title">@wbytts/utils</view>
+      <view class="subtitle">微信小程序示例</view>
+    </view>
+    
+    <view class="version-info">
+      <view class="version-item">
+        <text class="label">示例版本:</text>
+        <text class="value">{{version}}</text>
+      </view>
+      <view class="version-item">
+        <text class="label">工具库:</text>
+        <text class="value">{{utilsVersion}}</text>
+      </view>
+    </view>
+
+    <view class="stats">
+      <view class="stat-item">
+        <view class="stat-number">{{stats.totalFunctions}}</view>
+        <view class="stat-label">工具函数</view>
+      </view>
+      <view class="stat-item">
+        <view class="stat-number">{{stats.categories}}</view>
+        <view class="stat-label">功能分类</view>
+      </view>
+      <view class="stat-item">
+        <view class="stat-number">{{stats.examples}}</view>
+        <view class="stat-label">使用示例</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 功能模块 -->
+  <view class="features-section">
+    <view class="section-title">功能模块</view>
+    
+    <view class="features-grid">
+      <view 
+        class="feature-card" 
+        wx:for="{{features}}" 
+        wx:key="id"
+        data-path="{{item.path}}"
+        bindtap="navigateToFeature"
+      >
+        <view class="feature-icon">{{item.icon}}</view>
+        <view class="feature-title">{{item.title}}</view>
+        <view class="feature-desc">{{item.desc}}</view>
+        
+        <view class="feature-functions">
+          <view 
+            class="function-tag" 
+            wx:for="{{item.functions}}" 
+            wx:for-item="func"
+            wx:key="*this"
+          >
+            {{func}}
+          </view>
+        </view>
+        
+        <view class="feature-arrow">→</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 快速操作 -->
+  <view class="actions-section">
+    <view class="section-title">快速操作</view>
+    
+    <view class="actions-grid">
+      <button class="action-btn" bindtap="viewDocs">
+        <view class="action-icon">📖</view>
+        <view class="action-text">查看文档</view>
+      </button>
+      
+      <button class="action-btn" bindtap="showAbout">
+        <view class="action-icon">ℹ️</view>
+        <view class="action-text">关于我们</view>
+      </button>
+      
+      <button class="action-btn" bindtap="showFeedback">
+        <view class="action-icon">💬</view>
+        <view class="action-text">反馈建议</view>
+      </button>
+      
+      <button class="action-btn" bindtap="copyLink">
+        <view class="action-icon">🔗</view>
+        <view class="action-text">复制链接</view>
+      </button>
+    </view>
+  </view>
+
+  <!-- 使用提示 -->
+  <view class="tips-section">
+    <view class="section-title">使用提示</view>
+    
+    <view class="tips-list">
+      <view class="tip-item">
+        <view class="tip-icon">💡</view>
+        <view class="tip-text">点击上方功能卡片可以查看详细示例</view>
+      </view>
+      
+      <view class="tip-item">
+        <view class="tip-icon">🔧</view>
+        <view class="tip-text">每个功能都提供了完整的使用演示</view>
+      </view>
+      
+      <view class="tip-item">
+        <view class="tip-icon">📱</view>
+        <view class="tip-text">支持小程序环境下的所有功能</view>
+      </view>
+    </view>
+  </view>
+</view>

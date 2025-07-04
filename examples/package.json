@@ -1,0 +1,37 @@
+{
+  "name": "@wbytts/utils-examples",
+  "version": "1.0.0",
+  "description": "Examples for @wbytts/utils package",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev:vanilla": "cd 01-vanilla-js && npm run dev",
+    "dev:vue": "cd 02-vue-project && npm run dev",
+    "dev:react": "cd 03-react-project && npm run dev",
+    "dev:node": "cd 04-nodejs-backend && npm run dev",
+    "dev:ts": "cd 05-typescript-project && npm run dev",
+    "build:all": "npm run build:vanilla && npm run build:vue && npm run build:react && npm run build:ts",
+    "build:vanilla": "cd 01-vanilla-js && npm run build",
+    "build:vue": "cd 02-vue-project && npm run build",
+    "build:react": "cd 03-react-project && npm run build",
+    "build:ts": "cd 05-typescript-project && npm run build",
+    "install:all": "npm run install:vanilla && npm run install:vue && npm run install:react && npm run install:node && npm run install:ts",
+    "install:vanilla": "cd 01-vanilla-js && npm install",
+    "install:vue": "cd 02-vue-project && npm install",
+    "install:react": "cd 03-react-project && npm install",
+    "install:node": "cd 04-nodejs-backend && npm install",
+    "install:ts": "cd 05-typescript-project && npm install",
+    "clean": "rimraf */node_modules */dist */build */.next"
+  },
+  "devDependencies": {
+    "@wbytts/utils": "workspace:*",
+    "rimraf": "^5.0.5"
+  },
+  "workspaces": [
+    "01-vanilla-js",
+    "02-vue-project", 
+    "03-react-project",
+    "04-nodejs-backend",
+    "05-typescript-project"
+  ]
+}

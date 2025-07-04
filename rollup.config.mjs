@@ -79,4 +79,9 @@ export default [
     output: getOutputs("monitor", { globalName: "$ByMonitor" }),
     plugins: [...commonPlugins],
   },
+  {
+    input: "src/enum/index.ts",
+    output: getOutputs("enum", { globalName: "$ByEnum" }),
+    plugins: [...commonPlugins],
+  }
 ];

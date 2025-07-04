@@ -1,0 +1,190 @@
+/* 原生JavaScript示例专用样式 */
+
+/* 导航标签 */
+.nav-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 16px;
+}
+
+.nav-tab {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border-bottom: none;
+}
+
+.nav-tab:hover {
+  background-color: #f8f9fa;
+  border-color: #3498db;
+}
+
+.nav-tab.active {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
+
+/* 标签内容 */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* 按钮组 */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* 图片画廊 */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.preview-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.preview-img:hover {
+  transform: scale(1.05);
+  border-color: #3498db;
+}
+
+/* 结果显示增强 */
+.result {
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  word-break: break-all;
+}
+
+.result.empty {
+  color: #999;
+  font-style: italic;
+}
+
+/* 表单增强 */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group:last-child {
+  margin-bottom: 0;
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .nav-tabs {
+    flex-direction: column;
+  }
+  
+  .nav-tab {
+    border-radius: 4px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+  }
+  
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 加载状态 */
+.loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 成功/错误状态 */
+.success {
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: 500;
+}
+
+/* 代码显示 */
+.code-output {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 16px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+/* 高亮效果 */
+.highlight {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 8px 0;
+  animation: highlightFade 2s ease-out;
+}
+
+@keyframes highlightFade {
+  0% {
+    background-color: #fff3cd;
+    border-color: #ffeaa7;
+  }
+  100% {
+    background-color: transparent;
+    border-color: transparent;
+  }
+}

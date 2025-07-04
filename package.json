@@ -84,6 +84,11 @@
       "import": "./dist/monitor.esm.js",
       "require": "./dist/monitor.cjs.js",
       "types": "./dist/types/monitor/index.d.ts"
+    },
+    "./enum": {
+      "import": "./dist/enum.esm.js",
+      "require": "./dist/enum.cjs.js",
+      "types": "./dist/types/enum/index.d.ts"
     }
   },
   "main": "./dist/utils.cjs.js",
@@ -132,6 +137,7 @@
     "@types/lz-string": "^1.5.0",
     "@types/node": "^22.14.1",
     "@vue/compiler-sfc": "^3.5.13",
+    "animejs": "^4.0.1",
     "autoprefixer": "^10.4.21",
     "babel-jest": "^29.7.0",
     "bignumber.js": "^9.2.1",

@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/math/index",
+    "pages/validate/index", 
+    "pages/time/index",
+    "pages/utils/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "@wbytts/utils 示例",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_HL.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/math/index",
+        "iconPath": "images/icon_math.png", 
+        "selectedIconPath": "images/icon_math_HL.png",
+        "text": "数学"
+      },
+      {
+        "pagePath": "pages/validate/index",
+        "iconPath": "images/icon_validate.png",
+        "selectedIconPath": "images/icon_validate_HL.png", 
+        "text": "验证"
+      },
+      {
+        "pagePath": "pages/time/index",
+        "iconPath": "images/icon_time.png",
+        "selectedIconPath": "images/icon_time_HL.png",
+        "text": "时间"
+      },
+      {
+        "pagePath": "pages/utils/index",
+        "iconPath": "images/icon_utils.png",
+        "selectedIconPath": "images/icon_utils_HL.png",
+        "text": "工具"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "demo-card": "/components/demo-card/index",
+    "result-display": "/components/result-display/index"
+  }
+}

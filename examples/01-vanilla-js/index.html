@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@wbytts/utils - 原生JavaScript示例</title>
+  <link rel="stylesheet" href="../shared/styles/common.css">
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+  <div class="container">
+    <h1>@wbytts/utils 原生JavaScript示例</h1>
+    
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-tab="dom">DOM操作</button>
+      <button class="nav-tab" data-tab="bom">BOM操作</button>
+      <button class="nav-tab" data-tab="math">数学计算</button>
+      <button class="nav-tab" data-tab="validate">数据验证</button>
+      <button class="nav-tab" data-tab="time">时间处理</button>
+      <button class="nav-tab" data-tab="utils">通用工具</button>
+    </nav>
+
+    <!-- DOM操作示例 -->
+    <div id="dom-examples" class="tab-content active">
+      <div class="example-container">
+        <h3>数字动画</h3>
+        <p>展示数字从0动画到目标值的效果</p>
+        <div class="form-group">
+          <label class="form-label">目标数值:</label>
+          <input type="number" id="animate-target" class="form-input" value="1000" placeholder="输入目标数值">
+        </div>
+        <button id="start-animate" class="btn btn-primary">开始动画</button>
+        <div id="animate-result" class="result mt-2">当前值: 0</div>
+      </div>
+
+      <div class="example-container">
+        <h3>触摸事件控制</h3>
+        <p>控制页面的触摸滚动行为</p>
+        <button id="disable-touch" class="btn btn-warning">禁用触摸滚动</button>
+        <button id="enable-touch" class="btn btn-success">启用触摸滚动</button>
+        <div id="touch-status" class="result mt-2">触摸滚动: 启用</div>
+      </div>
+
+      <div class="example-container">
+        <h3>图片预览</h3>
+        <p>点击图片进行预览</p>
+        <div class="image-gallery">
+          <img src="https://picsum.photos/200/150?random=1" alt="示例图片1" class="preview-img">
+          <img src="https://picsum.photos/200/150?random=2" alt="示例图片2" class="preview-img">
+          <img src="https://picsum.photos/200/150?random=3" alt="示例图片3" class="preview-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- BOM操作示例 -->
+    <div id="bom-examples" class="tab-content">
+      <div class="example-container">
+        <h3>URL参数处理</h3>
+        <p>获取和处理URL查询参数</p>
+        <div class="form-group">
+          <label class="form-label">测试URL:</label>
+          <input type="text" id="test-url" class="form-input" 
+                 value="https://example.com?name=张三&age=25&hobby=读书&hobby=游戏" 
+                 placeholder="输入要解析的URL">
+        </div>
+        <button id="parse-url" class="btn btn-primary">解析URL参数</button>
+        <div id="url-result" class="result mt-2"></div>
+      </div>
+
+      <div class="example-container">
+        <h3>剪贴板操作</h3>
+        <p>复制文本到剪贴板</p>
+        <div class="form-group">
+          <label class="form-label">要复制的文本:</label>
+          <textarea id="copy-text" class="form-input" rows="3" placeholder="输入要复制的文本">Hello, @wbytts/utils!</textarea>
+        </div>
+        <button id="copy-btn" class="btn btn-primary">复制到剪贴板</button>
+        <div id="copy-result" class="result mt-2"></div>
+      </div>
+    </div>
+
+    <!-- 数学计算示例 -->
+    <div id="math-examples" class="tab-content">
+      <div class="example-container">
+        <h3>基础数学运算</h3>
+        <p>求和、平均值、阶乘等计算</p>
+        <div class="form-group">
+          <label class="form-label">数字列表 (用逗号分隔):</label>
+          <input type="text" id="numbers-input" class="form-input" value="1,2,3,4,5,6,7,8,9,10" placeholder="例: 1,2,3,4,5">
+        </div>
+        <div class="btn-group">
+          <button id="calc-sum" class="btn btn-primary">求和</button>
+          <button id="calc-average" class="btn btn-primary">平均值</button>
+        </div>
+        <div id="math-result" class="result mt-2"></div>
+      </div>
+
+      <div class="example-container">
+        <h3>阶乘计算</h3>
+        <p>计算指定数字的阶乘</p>
+        <div class="form-group">
+          <label class="form-label">数字:</label>
+          <input type="number" id="factorial-input" class="form-input" value="5" min="0" max="20">
+        </div>
+        <button id="calc-factorial" class="btn btn-primary">计算阶乘</button>
+        <div id="factorial-result" class="result mt-2"></div>
+      </div>
+    </div>
+
+    <!-- 数据验证示例 -->
+    <div id="validate-examples" class="tab-content">
+      <div class="example-container">
+        <h3>身份证验证</h3>
+        <div class="form-group">
+          <label class="form-label">身份证号:</label>
+          <input type="text" id="id-card-input" class="form-input" placeholder="输入身份证号码">
+        </div>
+        <button id="validate-id-card" class="btn btn-primary">验证身份证</button>
+        <div id="id-card-result" class="result mt-2"></div>
+      </div>
+
+      <div class="example-container">
+        <h3>手机号验证</h3>
+        <div class="form-group">
+          <label class="form-label">手机号:</label>
+          <input type="text" id="phone-input" class="form-input" placeholder="输入手机号码">
+        </div>
+        <button id="validate-phone" class="btn btn-primary">验证手机号</button>
+        <div id="phone-result" class="result mt-2"></div>
+      </div>
+
+      <div class="example-container">
+        <h3>URL验证</h3>
+        <div class="form-group">
+          <label class="form-label">URL:</label>
+          <input type="text" id="url-input" class="form-input" placeholder="输入URL地址">
+        </div>
+        <button id="validate-url" class="btn btn-primary">验证URL</button>
+        <div id="url-validate-result" class="result mt-2"></div>
+      </div>
+    </div>
+
+    <!-- 时间处理示例 -->
+    <div id="time-examples" class="tab-content">
+      <div class="example-container">
+        <h3>时间格式化</h3>
+        <p>使用dayjs进行时间格式化</p>
+        <button id="format-now" class="btn btn-primary">格式化当前时间</button>
+        <button id="format-custom" class="btn btn-primary">自定义格式</button>
+        <div id="time-result" class="result mt-2"></div>
+      </div>
+
+      <div class="example-container">
+        <h3>时间计算</h3>
+        <p>时间加减和时间差计算</p>
+        <div class="form-group">
+          <label class="form-label">天数:</label>
+          <input type="number" id="days-input" class="form-input" value="7" placeholder="输入天数">
+        </div>
+        <button id="add-days" class="btn btn-primary">加天数</button>
+        <button id="subtract-days" class="btn btn-warning">减天数</button>
+        <div id="calc-time-result" class="result mt-2"></div>
+      </div>
+    </div>
+
+    <!-- 通用工具示例 -->
+    <div id="utils-examples" class="tab-content">
+      <div class="example-container">
+        <h3>字符串处理</h3>
+        <div class="form-group">
+          <label class="form-label">输入文本:</label>
+          <input type="text" id="string-input" class="form-input" value="Hello World" placeholder="输入要处理的文本">
+        </div>
+        <div class="btn-group">
+          <button id="reverse-string" class="btn btn-primary">反转字符串</button>
+          <button id="mask-string" class="btn btn-primary">掩码处理</button>
+        </div>
+        <div id="string-result" class="result mt-2"></div>
+      </div>
+
+      <div class="example-container">
+        <h3>设备检测</h3>
+        <p>检测当前设备类型</p>
+        <button id="detect-device" class="btn btn-primary">检测设备</button>
+        <div id="device-result" class="result mt-2"></div>
+      </div>
+
+      <div class="example-container">
+        <h3>随机数生成</h3>
+        <div class="form-group">
+          <label class="form-label">范围 (最小值-最大值):</label>
+          <input type="text" id="range-input" class="form-input" value="1-100" placeholder="例: 1-100">
+        </div>
+        <button id="generate-random" class="btn btn-primary">生成随机数</button>
+        <button id="generate-color" class="btn btn-success">生成随机颜色</button>
+        <div id="random-result" class="result mt-2"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

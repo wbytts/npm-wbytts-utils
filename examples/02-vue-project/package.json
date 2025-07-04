@@ -1,0 +1,19 @@
+{
+  "name": "vue-project-example",
+  "version": "1.0.0",
+  "description": "Vue.js example for @wbytts/utils",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.0",
+    "@wbytts/utils": "workspace:*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "vite": "^5.0.0"
+  }
+}

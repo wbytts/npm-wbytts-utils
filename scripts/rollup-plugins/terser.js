@@ -9,7 +9,7 @@ export default terser({
     keep_classnames: false,
     keep_fnames: false,
     format: {
-      beautify: false,
+      beautify: true,
       comments: false,
       keep_numbers: false,
       // width: 120,

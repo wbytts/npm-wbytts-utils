@@ -15,8 +15,8 @@ export const commonPlugins = [
   json(),
   // ...stylePlugins,
   // babelPlugin,
-  // terserPlugin,
+  terserPlugin,
   typescriptPlugin,
   // summaryPlugin,
-  yalcPushAfterBuild
+  // yalcPushAfterBuild
 ];
